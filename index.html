@@ -118,7 +118,8 @@ section.block{padding-block:clamp(60px,8vw,100px)}
 .tl-axis{position:absolute;left:0;right:0;top:58px;height:2px;background:var(--line)}
 .tl-span{position:absolute;top:56px;height:6px;border-radius:3px;background:var(--accent);opacity:.9;transition:left .35s ease,width .35s ease}
 .tl-year{position:absolute;top:76px;transform:translateX(-50%);font:400 .7rem/1 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
-.tl-year::before{content:"";position:absolute;left:50%;top:-12px;width:1px;height:6px;background:var(--line)}
+.tl-year::before{content:"";position:absolute;left:50%;top:-12px;width:1px;height:6px;background:var(--muted);opacity:.5}
+.tl-year.minor::before{height:4px;top:-11px;opacity:.3}
 .tl-node{position:absolute;top:0;bottom:0;transform:translateX(-50%);width:6.8rem;background:none;border:0;padding:0;color:var(--muted);cursor:pointer;font:500 .72rem/1.25 var(--mono);letter-spacing:.03em;text-align:center}
 .tl-node .lab{position:absolute;left:0;right:0;bottom:calc(100% - 46px);display:block}
 .tl-node .dot{position:absolute;left:50%;top:51px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--bg);border:2px solid var(--mint);transition:transform .2s ease,background .2s ease,border-color .2s ease}
@@ -245,7 +246,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
       </div>
       <div class="viewer" id="viewer">
 
-      <article class="period" id="p-cro" data-start="2019.75" data-end="2026.85" data-label="Vaccine CRO" data-short="2019 – now">
+      <article class="period" id="p-cro" data-start="2019" data-end="2026.85" data-label="Vaccine CRO" data-short="2019 – now">
         <time>2019 – now</time>
         <div class="body">
           <div class="role"><h3>Expert Epidemiologist</h3><p class="org">European CRO specialising in vaccine and infectious-disease research</p></div>
@@ -265,7 +266,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
         </div>
       </article>
 
-      <article class="period" id="p-pharma" data-start="2022.6" data-end="2023.45" data-label="Biopharma" data-short="2022 – 23">
+      <article class="period" id="p-pharma" data-start="2022" data-end="2023" data-label="Biopharma" data-short="2022 – 23">
         <time>2022 – 2023</time>
         <div class="body">
           <div class="role"><h3>Senior Pharmacoepidemiologist, Safety Epidemiology</h3><p class="org">Global biopharmaceutical company</p></div>
@@ -276,7 +277,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
         </div>
       </article>
 
-      <article class="period" id="p-tampere" data-start="2014.4" data-end="2019.5" data-label="Tampere · THL" data-short="2014 – 19">
+      <article class="period" id="p-tampere" data-start="2014" data-end="2019" data-label="Tampere · THL" data-short="2014 – 19">
         <time>2014 – 2019</time>
         <div class="body">
           <div class="role"><h3>Doctoral Researcher, Vaccine Epidemiology</h3><p class="org">Tampere University · visiting researcher at THL, Finnish Institute for Health and Welfare</p></div>
@@ -291,7 +292,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
         </div>
       </article>
 
-      <article class="period" id="p-namru" data-start="2011.6" data-end="2016.1" data-label="NAMRU-3" data-short="2011 – 16">
+      <article class="period" id="p-namru" data-start="2011" data-end="2016" data-label="NAMRU-3" data-short="2011 – 16">
         <time>2011 – 2016</time>
         <div class="body">
           <div class="role"><h3>Medical Epidemiologist</h3><p class="org">US Naval Medical Research Unit No. 3 (NAMRU-3), Cairo · Infection Control Unit, with US CDC</p></div>
@@ -304,7 +305,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
         </div>
       </article>
 
-      <article class="period" id="p-ainshams" data-start="2008.8" data-end="2010.6" data-label="Ain Shams" data-short="2008 – 10">
+      <article class="period" id="p-ainshams" data-start="2008" data-end="2010" data-label="Ain Shams" data-short="2008 – 10">
         <time>2008 – 2010</time>
         <div class="body">
           <div class="role"><h3>Medical Epidemiologist</h3><p class="org">Viral Hepatitis Research Lab, Ain Shams University, Cairo (the late Prof. Mostafa Kamal)</p></div>
@@ -316,11 +317,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
         </div>
       </article>
 
-      <article class="period" id="p-clinic" data-start="2003.6" data-end="2008.1" data-label="Clinical medicine" data-short="2003 – 08">
+      <article class="period" id="p-clinic" data-start="2003" data-end="2008" data-label="Clinical medicine" data-short="2003 – 08">
         <time>2003 – 2008</time>
         <div class="body">
-          <div class="role"><h3>Medical Doctor</h3><p class="org">Egypt and Saudi Arabia</p></div>
-          <p class="summary">Clinical training at Cairo University hospitals, then general, occupational and preventive medicine in the public and private sectors.</p>
+          <div class="role"><h3>Medical Doctor</h3><p class="org">Egypt, Saudi Arabia and Finland</p></div>
+          <p class="summary">Clinical training at Cairo University hospitals, including a 12-month rotation across surgical and medical departments, then general, occupational and preventive medicine in the public and private sectors in Egypt. Further clinical training in the chronic kidney disease unit of a university hospital in Mecca, Saudi Arabia (2008), and in the pulmonary disease unit of Helsinki University Hospital, Finland (2019).</p>
         </div>
       </article>
       </div>
@@ -393,7 +394,7 @@ document.querySelectorAll('.copy').forEach(function(b){
   var periods=[].slice.call(viewer.querySelectorAll('.period')).sort(function(a,b){return a.dataset.start-b.dataset.start});
   if(!periods.length) return;
   var Y0=2002, Y1=2027, pct=function(y){return ((y-Y0)/(Y1-Y0)*100)+'%'};
-  for(var y=2004;y<=2026;y+=2){var t=document.createElement('span');t.className='tl-year';t.style.left=pct(y);t.textContent=y;tl.appendChild(t)}
+  for(var y=2003;y<=2026;y++){var t=document.createElement('span');t.className='tl-year'+(y%2?' minor':'');t.style.left=pct(y);t.textContent=y%2?'':y;tl.appendChild(t)}
   var span=document.getElementById('tl-span'), nodes=[];
   periods.forEach(function(p,i){
     var b=document.createElement('button');
